@@ -5,7 +5,7 @@ const Daerah = {
   async render() {
     return `
     <div class="content">
-    <h2 class="content__heading">Dearah</h2>
+    <h2 class="content__heading text-5xl">Dearah</h2>
     <div id="daerah" class="foods">
     </div>
   </div>

@@ -4,8 +4,8 @@ class JumbotronHero extends HTMLElement {
     this.innerHTML = ` 
     <article>
     <picture>
-      <source media="(max-width: 600px)" srcset="./images/heros/hero-image_4-small.jpg" >
-      <img  class="jumbotron" src="./images/heros/hero-image_4-large.jpg" alt="web image">
+      <source media="(max-width: 600px)" srcset="./images/heros/banner-small.jpg" >
+      <img  class="jumbotron" src="./images/heros/banner-large.jpg" alt="web image">
     </picture>
     </article>
         `;

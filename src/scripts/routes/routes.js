@@ -10,7 +10,7 @@ const routes = {
   '/daerah': Daerah,
   '/favorite': Favorite,
   '/detail/:id': Detail,
-  '/detail-daerah/:daerahId': DetailDaerah,
+  '/detail-daerah/:id': DetailDaerah,
 };
 
 export default routes;

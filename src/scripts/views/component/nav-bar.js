@@ -7,7 +7,7 @@ class NavBar extends HTMLElement {
     <button id="hamburgerButton" class="hamburgerButton">☰</button>
   </div>
   <div class="app-bar__brand">
-  <img class="image-brand" src="./images/heros/images-7.jpg" alt="web image" style="width: 40px; margin-right: 13px;">
+  <img class="image-brand" src="./images/heros/saborama.png" alt="web image" style="width: 40px; margin-right: 13px;">
     <div class="name_brand">SABORAMA</div>
   </div>
   <nav id="navigationDrawer" class="app-bar__navigation">

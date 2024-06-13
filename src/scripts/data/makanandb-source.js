@@ -22,7 +22,7 @@ class MakananSource {
     return response.json();
   }
 
-  static async postReview(data) {
+  static async postComent(data) {
     const options = {
       method: 'POST',
       headers: {

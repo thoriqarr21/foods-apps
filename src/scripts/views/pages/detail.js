@@ -3,25 +3,26 @@ import MakananSource from "../../data/makanandb-source";
 import { createMakananDetailTemplate } from "../templates/template-creator";
 import LikeButtonInitiator from "../../utils/like-button-initiator";
 import FavoriteMakananIdb from "../../data/favorite-makanan-idb";
-import PostResep from "../../utils/post-resep";
+import PostComent from "../../utils/post-coment";
 
 const Detail = {
   async render() {
     return `
+    <div class="content">
       <div id="makanan" class="food"></div>
       <div id="likeButtonContainer"></div>
 
-      <div class="form-resep">
+      <div class="form-coment">
           <form>
             <div class="mb-3">
-              <label for="inputBahan" class="form-label">Bahan</label>
-              <input name="inputBahan" type="text" class="form-control" id="inputBahan">
+              <label for="inputName" class="form-label">Name</label>
+              <input name="inputName" type="text" class="form-control" id="inputName">
             </div>
             <div class="mb-3">
-              <label for="inputCaraMasak" class="form-label">CaraMasak</label>
-              <input name="inputCaraMasak" type="text" class="form-control" id="inputCaraMasak">
+              <label for="inputKomentar" class="form-label">Komentar</label>
+              <input name="inputKomentar" type="text" class="form-control" id="inputKomentar">
             </div>
-            <button id="submit-resep" type="submit" class="btn">Submit</button>
+            <button id="submit-coment" type="submit" class="btn">Submit</button>
           </form>
         </div>
     </div>
@@ -33,9 +34,7 @@ const Detail = {
     const makanan = await MakananSource.makananDetail(url.id);
     const makananContainer = document.querySelector("#makanan");
 
-    makananContainer.innerHTML = createMakananDetailTemplate(
-      makanan.makanan
-    );
+    makananContainer.innerHTML = createMakananDetailTemplate(makanan.makanan);
     LikeButtonInitiator.init({
       likeButtonContainer: document.querySelector("#likeButtonContainer"),
       favoriteMakanans: FavoriteMakananIdb,
@@ -48,14 +47,13 @@ const Detail = {
         waktu: makanan.makanan.waktu,
         rating: makanan.makanan.rating,
         image: makanan.makanan.image,
-        daerahId: makanan.makanan.daerahId,
       },
     });
 
-    const submitResep = document.getElementById("submit-resep");
-    submitResep.addEventListener("click", (event) => {
+    const submitComent = document.getElementById("submit-coment");
+    submitComent.addEventListener("click", (event) => {
       event.preventDefault();
-      PostResep();
+      PostComent();
     });
     // Fungsi ini akan dipanggil setelah render()
   },

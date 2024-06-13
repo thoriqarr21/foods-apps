@@ -4,15 +4,12 @@
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "cursive", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   background-color: white;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-}
-.center {
-  justify-content: center;
-  text-align: center;
 }
 .container {
   display: grid;
@@ -22,10 +19,10 @@ body {
   border-radius: 8px;
   overflow: hidden;
   width: 100%;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
-.image-container img {
+.image-container {
   margin-top: 15px;
   width: 100%;
   height: auto;
@@ -33,7 +30,7 @@ body {
 }
 
 .text-container {
-  padding: 30px;
+  padding: 33px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -81,6 +78,13 @@ body {
   cursor: pointer;
 }
 
+.logo {
+  width: 30vw;
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+}
+
 .app-bar .app-bar__brand {
   display: flex;
   align-items: center;
@@ -100,6 +104,18 @@ body {
   line-height: 24px;
 }
 
+.food__ringkasan {
+  background-color: #ffffff;
+  padding: 30px;
+  box-shadow: 3px 3px 5px 1px #070f2b;
+  border-radius: 8px;
+}
+.food__overview {
+  background-color: #ffffff;
+  padding: 20px;
+  box-shadow: 3px 3px 5px 1px #070f2b;
+  border-radius: 8px;
+}
 
 .app-bar .app-bar__navigation {
   line-height: 44px;
@@ -302,9 +318,9 @@ main {
   */
 
 .food {
+  background-color: white;
+  padding: 5px;
   margin: 0 auto;
-  width: 100%;
-  max-width: 800px;
   display: grid;
   grid-template-columns: 1fr;
   gap: 18px 16px;
@@ -312,33 +328,39 @@ main {
 
 .food .food__poster {
   width: 100%;
-  max-width: 400px;
+  max-width: 1000px;
 }
-
+.food__info {
+  width: 40%;
+}
 .food .food__info h4 {
   margin: 8px 0;
 }
 
 /* Detail Review */
-.detail-resep {
+.detail-coment {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 800px;
   font-size: 1em;
   text-align: center;
 }
 
-.detail-resep-item {
+.detail-coment-item {
   color: var(--secondary-color);
   background-color: var(--third-color);
   margin-bottom: 1.5em;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
     rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
   border-radius: 2em;
+  /* justify-content: center; */
+  text-align: center;
+  padding: 3px;
 }
 
-.header-resep {
+.header-coment {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -347,23 +369,25 @@ main {
   border-bottom: 1px solid var(--secondary-color);
 }
 
-.bahan-resep {
+.bahan-coment {
   font-weight: bold;
   font-size: 1.5em;
   margin: 0;
 }
-.teks-resep {
+.teks-coment {
   margin-top: 20px;
   text-align: center;
   margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: 800;
 }
-.resep-bahan {
+.coment-bahan {
   font-size: 1em;
   font-weight: lighter;
   font-size: 1em;
 }
 
-.body-resep {
+.body-coment {
   margin-top: 20px;
   padding: 1em;
   text-align: left;
@@ -377,7 +401,7 @@ main {
 /*
     Form review
   */
-.form-resep {
+.form-coment {
   margin-top: 20px;
   padding: 20px;
   border: 1px solid #ccc;
